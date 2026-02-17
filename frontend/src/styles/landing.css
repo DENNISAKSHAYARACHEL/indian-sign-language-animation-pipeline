@@ -1,0 +1,152 @@
+/* =========================
+   BASE WRAPPER
+========================= */
+.landing-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #0a0a0a;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================
+   VIDEO GRID BACKGROUND
+========================= */
+.video-grid-bg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Each vertical column */
+.video-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px 10px;
+}
+
+/* Card style */
+.video-column video {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 24px;
+  background: #000;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+  filter: brightness(0.45) contrast(1.1);
+  opacity: 0.85;
+}
+
+/* Infinite illusion using double height */
+.video-column {
+  animation-duration: 35s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Upwards */
+.move-up {
+  animation-name: scrollUp;
+}
+
+/* Downwards */
+.move-down {
+  animation-name: scrollDown;
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+/* =========================
+   DARK OVERLAY (STRONGER)
+========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 2;
+}
+
+/* =========================
+   FOREGROUND CONTENT
+========================= */
+.landing-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landing-content h1 {
+  font-size: 60px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 45px;
+  opacity: 0.85;
+}
+
+.get-started-btn {
+  padding: 18px 46px;
+  font-size: 18px;
+  border-radius: 999px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 60px;
+  transition: transform 0.2s ease;
+}
+
+.get-started-btn:hover {
+  transform: scale(1.06);
+}
+
+.quote {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 14px;
+}
+/* =========================
+   MAKE BACKGROUND MORE VISIBLE
+========================= */
+
+/* Reduce dark overlay strength */
+.overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Make videos brighter + clearer */
+.video-column video {
+  filter: brightness(0.75) contrast(1.05);
+  opacity: 0.95;
+}
+
+/* Optional: add subtle glow so they feel like cards */
+.video-column video {
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.05);
+}
+

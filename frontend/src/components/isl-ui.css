@@ -1,0 +1,207 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.translator-bg {
+  height: 100vh;
+  width: 100%;
+  background: #0A0A0A;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.translator-container {
+  width: 100%;
+  max-width: 1300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* =========================
+   LANGUAGE SCREEN
+========================= */
+
+.language-overlay {
+  margin: auto;
+  text-align: center;
+}
+
+.lang-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.lang-buttons button {
+  padding: 10px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.translator-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-pill {
+  padding: 6px 18px;
+  border-radius: 25px;
+  background: #1c1c1c;
+  color: white;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.change-lang-btn {
+  margin-left: 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+
+/* =========================
+   VIDEO AREA
+========================= */
+
+.middle-output {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FIXED VIDEO BOX (always present) */
+
+.middle-output .isl-output {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stable video frame */
+.middle-output .avatar-stage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* No cropping */
+.middle-output .avatar-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Caption always below */
+.middle-output .caption {
+  margin-top: 8px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Placeholder does NOT push layout */
+.placeholder-text {
+  position: absolute;
+  color: #666;
+  font-size: 15px;
+}
+
+/* =========================
+   INPUT AREA
+========================= */
+
+.bottom-input {
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-row {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.isl-textarea {
+  flex: 1;
+  height: 50px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  background: #111;
+  color: white;
+  font-size: 14px;
+  resize: none;
+}
+
+.submit-btn {
+  margin-top: 8px;
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.converted-text {
+  margin-top: 8px;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  max-width: 720px;
+  width: 100%;
+  font-size: 14px;
+}
