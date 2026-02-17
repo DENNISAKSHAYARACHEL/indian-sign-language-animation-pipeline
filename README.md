@@ -56,12 +56,13 @@ Captioned Output
 
 The ISL video dataset is not included in this repository.
 
-Dataset Link:
+Dataset Link:https://www.kaggle.com/datasets/dakshayarachel/isl-social-interaction-animation-dataset
 
 
 After downloading, place the dataset inside:
 
 backend/static/videos/
+
 
 
 
